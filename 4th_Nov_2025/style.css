@@ -1,0 +1,59 @@
+/* Page centering */
+/* This section sets up the basic layout of the page. */
+html, body {
+  height: 100%;    /* Makes both <html> and <body> fill the full viewport height. */
+  margin: 0;       /* Removes the browser’s default margin around the page. */
+}
+
+body {
+  display: flex;               /* Uses Flexbox layout for easy alignment. */
+  align-items: center;         /* Vertically centers content inside the page. */
+  justify-content: center;     /* Horizontally centers content. */
+  background: #ddd;            /* Sets a light gray background color for the page. */
+  /* "#ddd" is shorthand for #dddddd, a neutral gray tone. */
+}
+
+/* Pattern box: fixed 400x300 */
+/* Styles for the box that displays the gradient pattern. */
+.pattern {
+  width: 400px;         /* Sets a fixed width of 400 pixels for the box. */
+  height: 300px;        /* Sets a fixed height of 300 pixels. */
+  font-size: 16px;      /* Base font size; affects units like em and ch. 
+                           1em = 16px, and 5ch ≈ 40px (depends on font). */
+
+  /* === Background layers === */
+  background:
+    conic-gradient(at 5ch 1em, #0000 75%, #000 0)
+    180px 142px / 150px,
+    /* 'conic-gradient()' creates a gradient that spins around a center point.
+       Syntax: conic-gradient(at <position>, <color-stop1>, <color-stop2>, ...)
+       
+       at 5ch 1em → sets the center of the conic gradient:
+         - '5ch' = 5 character widths from the left.
+         - '1em' = 1 font-size unit (16px) from the top.
+       
+       #0000 75% → fully transparent color until 75% of the rotation.
+       #000 0 → solid black starts at 0 degrees (fills the remaining area).
+       
+       180px 142px → moves (positions) the gradient 180px right and 142px down.
+       /150px → scales the gradient image to 150px (tile size). */
+
+    radial-gradient(1q, #00D47E 25px, #000 0 50px, #00D47E)
+    5px / 130px;
+    /* 'radial-gradient()' creates circular or elliptical color transitions.
+       Syntax: radial-gradient(<size> at <position>, <color-stops>...)
+
+       1q → very small unit (1 quarter millimeter).
+       #00D47E 25px → green color spreads out to 25px radius.
+       #000 0 50px → black color appears from 0 offset up to 50px.
+       #00D47E → green color again beyond that, forming concentric rings.
+       
+       5px → moves this gradient 5px from top-left corner.
+       /130px → repeats the pattern every 130px (tile size). */
+
+  background-repeat: repeat;   /* Repeats both background layers to fill the box. */
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  /* Adds a soft shadow (0px horizontal, 8px vertical, 20px blur)
+     with light transparency (18%) to make the box stand out. */
+}
