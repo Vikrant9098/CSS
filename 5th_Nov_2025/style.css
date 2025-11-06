@@ -1,0 +1,48 @@
+/* === Page setup and layout === */
+/* This section defines the background and styling behavior for the page and all elements. */
+& {
+  background: #0B2429;  
+  /* Sets the entire page background to a dark teal color (#0B2429). 
+     In CSSBattle, '&' targets the root container (similar to <body>). */
+
+  * {
+    margin: 20;  
+    /* Gives every element a uniform margin of 20px for spacing. */
+
+    /* === Background pattern layers === */
+    background:
+      conic-gradient(
+        at 20ch 50px, 
+        /* Defines the center of the first conic gradient:
+           - '20ch' → 20 character widths from the left edge.
+           - '50px' → 50 pixels down from the top. */
+
+        #0000 75%, 
+        /* Makes the first 75% of the gradient circle transparent. */
+
+        #0B2429 0 
+        /* Fills the remaining 25% of the circle with dark teal color (#0B2429). */
+      )
+      25vw 25ch, 
+      /* Positions the first conic gradient:
+         - '25vw' → 25% of the viewport width from the left.
+         - '25ch' → 25 character heights from the top. */
+
+      conic-gradient(
+        at 65vw 20ch, 
+        /* Defines the center of the second conic gradient:
+           - '65vw' → 65% of the viewport width (right side).
+           - '20ch' → 20 character widths from the top. */
+
+        #A7C2FA 75%, 
+        /* Light blue color fills 75% of the gradient circle. */
+
+        #0000 0 
+        /* Transparent color fills the remaining part of the circle. */
+      )
+      50px 5ch / 75vw 25ch; 
+      /* Positions and scales the second conic gradient:
+         - '50px' right, '5ch' down from top-left.
+         - '75vw' wide and '25ch' tall tile size. */
+  }
+}
