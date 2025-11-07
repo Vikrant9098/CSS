@@ -1,0 +1,28 @@
+/* Sets background color for entire page */
+& {
+  background: #556D7F;
+}
+
+/* Styles all <p> elements */
+p {
+  height: 230px;                        /* sets paragraph height */
+  width: 100%;                          /* makes it full page width */
+
+  /* creates layered background with two gradients */
+  background:
+    radial-gradient(1q at 50% 45vw, #EBCB58 50px, #0000), /* yellow circular gradient at center */
+    linear-gradient(#EBCB58 50vh, #0000 0);               /* yellow-to-transparent vertical fade */
+
+  margin: 35px var(--1, 142px) -265px;   /* top, horizontal (using custom var), and negative bottom margin */
+}
+
+/* Styles the next <p> element after another <p> */
+p + p {
+  --1: 32px;     /* changes the custom variable --1 for margin */
+  scale: -1;     /* flips element horizontally (mirror effect) */
+}
+
+/* Styles the <p> after two <p> elements */
+p + p + p {
+  --1: 252px;    /* changes the margin variable again for third paragraph */
+}
