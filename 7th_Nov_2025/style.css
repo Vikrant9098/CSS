@@ -1,0 +1,40 @@
+/* Set up the overall page */
+body {
+  background: #FFF8EA;          /* Light cream background color */
+  display: flex;                /* Use flexbox for alignment */
+  justify-content: center;      /* Center the container horizontally */
+  align-items: center;          /* Center the container vertically */
+  height: 100vh;                /* Make body take full screen height */
+  margin: 0;                    /* Remove default page margins */
+}
+
+/* Container to hold the design */
+.container {
+  width: 400px;                 /* Fixed width of 400px */
+  height: 300px;                /* Fixed height of 300px */
+  position: relative;           /* Allows absolute positioning inside */
+}
+
+/* Vertical rectangle */
+.v {
+  width: 50px;                  /* Rectangle width */
+  height: 120px;                /* Rectangle height */
+  background: #81D2B0;          /* Mint green color */
+  border-radius: 30px;          /* Rounded edges */
+  position: absolute;           /* Position it freely inside container */
+  top: 40px;                    /* Space from top */
+  left: 175px;                  /* Center horizontally */
+  box-shadow: -70px 140px #81D2B0; /* Duplicate below-left shadow shape */
+}
+
+/* Horizontal rectangle */
+.h {
+  width: 120px;                 /* Rectangle width */
+  height: 50px;                 /* Rectangle height */
+  background: #DA6C8E;          /* Pink color */
+  border-radius: 30px;          /* Rounded edges */
+  position: absolute;           /* Position freely inside container */
+  top: 100px;                   /* Space from top */
+  left: 115px;                  /* Center horizontally */
+  box-shadow: 140px 70px #DA6C8E; /* Duplicate shape at bottom-right */
+}
