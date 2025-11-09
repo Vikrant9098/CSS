@@ -1,0 +1,28 @@
+/* 1. Set background color for the page */
+body {
+  background: #FFE5AC; /* soft yellow */
+  width: 400px; /* page width */
+  height: 300px; /* page height */
+  margin: 0 auto; /* center horizontally */
+  display: flex; /* use flexbox for alignment */
+  align-items: center; /* center vertically */
+  justify-content: center; /* center horizontally */
+}
+
+/* 2. Style for the <p> shape */
+p {
+  margin: 0; /* remove default margin */
+  height: 50px; /* shape height */
+  width: 200px; /* shape width */
+
+  /* 3. Gradient background for texture */
+  background:
+    radial-gradient(1q, #313131 5vh, #FFE5AC 0 25px, #0000) -10px -5vh / 70px 25vw,
+    conic-gradient(from -90deg at 50px 8vw, #313131 75%, #0000 0) 0 0 / 70px;
+
+  /* 4. Add dark shadow below */
+  box-shadow: 0 5pc #313131; /* deep shadow look */
+
+  /* 5. Make edges smooth and round */
+  border-radius: 1in; /* rounded corners */
+}
