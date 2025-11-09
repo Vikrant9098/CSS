@@ -1,0 +1,30 @@
+/* Set page background color and layout size */
+body {
+  background: #6F9893; /* Greenish-blue background */
+  width: 400px;        /* Page width */
+  height: 300px;       /* Page height */
+  margin: 0 auto;      /* Center page horizontally */
+  position: relative;  /* Allows absolute positioning inside */
+}
+
+/* Style for first <p> element */
+p {
+  height: 100px;          /* Height of the first shape */
+  aspect-ratio: 1;        /* Makes it a square */
+  background: #394257;    /* Dark bluish-gray color */
+  margin: 100px auto -275px; /* Centers it and pulls second shape upward */
+  rotate: 45deg;          /* Rotates the square to form a diamond */
+}
+
+/* Style for second <p> element */
+p + p {
+  height: 250px; /* Taller shape below the first one */
+  
+  /* Diagonal gradient design */
+  background: linear-gradient(
+    45deg,             /* Angle of the gradient */
+    #D9D9D9 145q,      /* Light gray color till 145q (CSS unit for gradient) */
+    #0000 0 217px,     /* Transparent part till 217px */
+    #D9D9D9 0          /* Light gray continues again */
+  );
+}
